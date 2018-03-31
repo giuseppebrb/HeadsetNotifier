@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Impostazioni</string>
+    <string name="service_description">Controlla quando cuffie a cavo o bluetooth vengono collegate</string>
+    <string name="foreground_service_ticker">Headphones Notifier è acceso</string>
+    <string name="foreground_service_description">Imposta i suoni di notifica come impostati definit dell\'utente all\'interno dell\'app</string>
+    <string name="notification_content">Tocca per cambiare le impostazioni.</string>
+    <string name="notification_title">Headphones Notifier è attivo</string>
+    <string name="empty_state">Nessun filtro di notifica impostato. \nTocca + per aggiungerne uno.</string>
+    <string name="add_filter">Aggiungi nuovo filtro</string>
+    <string name="no">No</string>
+    <string name="yes">Sì</string>
+    <string name="permission_needed">Permesso Richiesto</string>
+    <string name="permission_needed_explanation">Per garantire il corretto funzionamento, è necessario garntire all\'app i permessi di lettura notifiche.\nApri le impostazioni ed abilita il permesso per l\'app.</string>
+    <string name="cancel">Annulla</string>
+    <string name="notification_settings">Impostazioni Notifica</string>
+    <string name="select_application">Seleziona un\'applicazione:</string>
+    <string name="select_sound">Seleziona audio di notifica:</string>
+    <string name="save">Salva</string>
+    <string name="error">Errore</string>
+    <string name="incomplete_values">Impossibile salvare il filtro.\nApplicazione o audio di notifica non selezionati.</string>
+    <string name="ok">Ok</string>
+    <string name="warning">Attenzione</string>
+    <string name="filter_will_not_be_saved">Se esci il filtro non sarà salvato.\nSei sicuro di voler Uscire?</string>
+    <string name="leave">Esci</string>
+    <string name="delete_message">Vuoi cancellare questo filtro?</string>
+    <string name="notification_filters_active">Filtri Notifica Attivi</string>
+    <string name="loading">Caricamento</string>
+</resources>

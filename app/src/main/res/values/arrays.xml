@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="notification_sounds">
+        <item>Long Expected</item>
+        <item>Quite Impressed</item>
+        <item>Slow Spring Board</item>
+        <item>Solemn</item>
+        <item>To The Point</item>
+    </array>
+</resources>
