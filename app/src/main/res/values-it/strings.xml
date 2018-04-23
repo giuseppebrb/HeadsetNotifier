@@ -26,4 +26,8 @@
     <string name="delete_message">Vuoi cancellare questo filtro?</string>
     <string name="notification_filters_active">Filtri Notifica Attivi</string>
     <string name="loading">Caricamento</string>
+    <string name="edit_filter">Modifica Filtro</string>
+    <string name="app_selected">Applicazione selezionata:</string>
+    <string name="delete">Cancella</string>
+    <string name="cancel_edit_message">Se esci le modifiche su questo filtro non saranno salvate.\nSei sicuro di voler Uscire?</string>
 </resources>
