@@ -77,6 +77,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.giuseppebrb.headsetnotifier.MainActivity"/>
         </activity>
+        <activity android:name=".FilterEdit"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:parentActivityName="io.github.giuseppebrb.headsetnotifier.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.giuseppebrb.headsetnotifier.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>

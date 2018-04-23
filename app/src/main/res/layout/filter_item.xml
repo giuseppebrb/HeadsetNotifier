@@ -7,7 +7,8 @@
     android:orientation="horizontal"
     android:id="@+id/filterItem"
     android:padding="5dp"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:longClickable="true">
 
     <ImageView
         android:id="@+id/appIcon"
@@ -24,7 +25,6 @@
         android:layout_gravity="center"
         android:layout_weight="0.86"
         android:padding="16dp"
-        android:text="PROVA"
         android:textColor="#000" />
 
     <ImageButton

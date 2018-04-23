@@ -20,6 +20,7 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -39,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private static FiltersListAdapter adapter;
     private static ListView listView;
     private static ArrayList<String> apps;
+    private static ArrayList<String> packages;
     private static ArrayList<Drawable> icons;
     private static PackageManager packageManager;
     private static SharedPreferences preferences;
 
-    private boolean isReceiverRegistered = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
         listView.setDivider(null);
         listView.setEmptyView(constraintLayout.findViewById(R.id.emptyLayout));
+        listView.setLongClickable(true);
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent editIntent = new Intent(parent.getContext(), FilterEdit.class);
+                editIntent.putExtra(Constants.APP_PACKAGE, packages.get(position));
+                startActivity(editIntent);
+                return true;
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -178,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
     private static void fetchListValues(){
         apps = new ArrayList<>();
         icons = new ArrayList<>();
+        packages = new ArrayList<>();
 
         Map<String, ?> allFilters = preferences.getAll();
 
@@ -189,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> values = gson.fromJson(json, ArrayList.class);
             try {
                 String packageName = values.get(0); // represents the package name;
+                packages.add(packageName);
                 ApplicationInfo app = packageManager.getApplicationInfo(packageName, 0);
                 icons.add(packageManager.getApplicationIcon(app));
             } catch (PackageManager.NameNotFoundException e) {
